@@ -25,6 +25,7 @@ import { CourseoverviewComponent } from './courseoverview/courseoverview.compone
 import { CheckoutComponent } from './checkout/checkout.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { BannerComponent } from './banner/banner.component';
 //import { LoginComponent } from './login/login.component';
 //import { RegisterComponent } from './register/register.component';
 //import { DashboardComponent } from './dashboard/dashboard.component';
@@ -45,7 +46,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     CourseoverviewComponent,
     CheckoutComponent,
     AboutusComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
