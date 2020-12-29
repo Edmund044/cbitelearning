@@ -3,27 +3,49 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OrdersComponent } from './orders/orders.component';
-import { OrderListComponent } from './order-list/order-list.component';
-import { OrdersService } from "./shared/orders.service";
-import { ReactiveFormsModule } from "@angular/forms";
+//import { OrdersComponent } from './orders/orders.component';
+//import { OrderListComponent } from './order-list/order-list.component';
+//import { OrdersService } from "./shared/orders.service";
+//import { ReactiveFormsModule } from "@angular/forms";
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { QuickTutorialCardComponent } from './quick-tutorial-card/quick-tutorial-card.component';
+import { MainCourseCardComponent } from './main-course-card/main-course-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { CertificatesComponent } from './certificates/certificates.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserComponent } from './user/user.component';
+import { MywalletComponent } from './mywallet/mywallet.component';
+import { VideocardComponent } from './videocard/videocard.component';
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseoverviewComponent } from './courseoverview/courseoverview.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+//import { LoginComponent } from './login/login.component';
+//import { RegisterComponent } from './register/register.component';
+//import { DashboardComponent } from './dashboard/dashboard.component';
+//import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
-    OrdersComponent,
-    OrderListComponent,
-    LoginComponent,
-    RegisterComponent,
+    QuickTutorialCardComponent,
+    MainCourseCardComponent,
+    NavbarComponent,
+    FooterComponent,
+    HomepageComponent,
+    CertificatesComponent,
     DashboardComponent,
-    UserComponent
+    MywalletComponent,
+    VideocardComponent,
+    CourseListComponent,
+    CourseoverviewComponent,
+    CheckoutComponent,
+    AboutusComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +54,7 @@ import { UserComponent } from './user/user.component';
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [OrdersService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

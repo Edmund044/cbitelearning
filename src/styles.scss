@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+// Your variable overrides
+/*font sizes*/
+$fontSize1:80px;
+$fontSize2:40px;
+$fontSize3:18px;
+$fontSize4:15px;
+$fontSize5:10px;
+/*font types*/
+$head:'Oswald', sans-serif;
+$body:'Roboto', sans-serif;
+
+
+$body-bg: #ffffff;
+$body-color: #111111;
+$primary:#EAEAEA;
+$secondary:#FB8500;
+//$success:;
+//$info,
+//$warning,
+$danger:red;
+$light:#ffffff;
+$dark:#000000;
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $head;
+}
+p{
+  font-family:$body;
+}
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+
+@import "../node_modules/bootstrap/scss/grid";
+//heading typograpghy
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+//body typograpghy
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+//fonts
+@import url('https://use.fontawesome.com/b8e23bf3b8.js');
