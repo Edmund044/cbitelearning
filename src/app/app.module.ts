@@ -27,6 +27,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { BannerComponent } from './banner/banner.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
+import { HeroimageComponent } from './heroimage/heroimage.component';
 //import { LoginComponent } from './login/login.component';
 //import { RegisterComponent } from './register/register.component';
 //import { DashboardComponent } from './dashboard/dashboard.component';
@@ -49,7 +50,8 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     AboutusComponent,
     SearchbarComponent,
     BannerComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    HeroimageComponent
   ],
   imports: [
     BrowserModule,
