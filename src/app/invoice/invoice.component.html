@@ -1,0 +1,186 @@
+
+
+<div class="container">
+  <div class="row" >
+        <div class="col-md-2">
+
+          </div>
+           <div class="col-md-8">
+            <div class="text-center">
+
+        <div class="form-signin shadow p-3 mb-5 bg-white rounded" method="POST" action="sendReceipt.php" >
+
+     <!-- <div class="row">
+        <div class="col-sm-6"><img src="./assets/images/heroImage.jpg" width="100%" height="33.3%" style="object-fit: contain;float: left;"></div>
+        <div class="col-sm-6"><?php
+        date_default_timezone_set("Africa/Nairobi");
+              $leo=date("F j, Y, g:i a");
+               echo $leo;?></div>
+      </div>-->
+     <?php
+      if (isset($_POST['submit'])) {
+$promoCode = $_POST['promo'];
+$first = $_POST['first'];
+$last=$_POST['last'];
+$username=$_POST['username'];
+$email=$_POST['email'];
+$address=$_POST['address'];
+$contact=$_POST['contact'];
+$country=$_POST['country'];
+$city=$_POST['city'];
+$postal=$_POST['postal'];
+$courier=$_POST['courier'];
+}
+?>
+            <h1 class="bg-secondary text-light">INVOICE</h1>
+      <hr>
+          <div class="row">
+            <div class="col-sm-6"><h3>SANABORA</h3>
+              <small><?php
+        date_default_timezone_set("Africa/Nairobi");
+              $leo=date("F j, Y, g:i a");
+               echo $leo;?></small>
+            </div>
+
+            <div class="col-sm-6">
+              <h6>ADDRESS</h6>
+              <small class="">P.O BOX 7689 - 00100,NAIROBI,KENYA</small><br>
+            <small class="">TEL 0207869993</small><br>
+            <small class="">CEL +254705186691</small><br>
+            <small class="">email: info@sanabora.com</small><br>
+
+            </div>
+
+          </div>
+           <hr>
+           <div class="row">
+             <div class="col-sm-6"><h6>Bill To</h6>
+                <small class=""><?php echo $first;?> <?php echo $last;?></small><br>
+            <small class=""><?php echo $username; ?></small><br>
+            <small class=""><?php echo $contact; ?></small><br>
+            <small class=""><?php echo $email;?></small><br>
+
+
+             </div>
+
+
+
+            <div class="col-sm-6"><h6>Ship To</h6>
+               <small class="">Ship using:<?php echo $courier; ?></small><br>
+               <small class="">Address:<?php echo $address; ?></small><br>
+                <small class="">City:<?php echo $city; ?></small><br>
+               <small class="">Country:<?php echo $country; ?></small><br>
+            <small class="">Postal address:<?php echo $postal; ?></small><br>
+            </div>
+        </div>
+      <hr>
+            <div class="row">
+              <div class="col-sm-2"><b>Items</b></div>
+              <div class="col-sm-2"><b>Product</b></div>
+              <div class="col-sm-2"><b>Color To Customize</b></div>
+              <div class="col-sm-2"><b>Quantity</b></div>
+              <div class="col-sm-2"><b>Price</b></div>
+              <div class="col-sm-2"><b>Amount</b></div>
+            </div>
+      <hr>
+      <div class="row">
+         <?php
+         $total = 0;
+
+   for ($i=0; $i < count($orders) ; $i++) {
+
+     if (($orders[$i]["sanabora_user"] == $_COOKIE['id']) && ($orders[$i]["status"] == '0') ) {
+         for ($j=0; $j < count($products) ; $j++) {
+           if ($products[$j]["product_id"] == $orders[$i]["productId"] ) {
+                 $currency = $products[$j]["currency"];
+
+             ?>
+                <div class="col-sm-2"><p class="mainBody"><img style="width: 100%;height: 100%;" src="<?php echo $products[$j]["media"];?>"></p></div>
+              <div class="col-sm-2"><p class="mainBody"><?php echo $products[$j]["product_name"];?></p>
+
+              </div>
+               <div class="col-sm-2"><p class="mainBody"><!--<div class="rounded-circle border-dark " style="background-color:<?php
+
+                  echo $orders[$i]["colors"];
+             ?>;
+width: 20px;
+height: 20px;
+border-width: 20px;
+margin: 2
+0%;"><p style="visibility: hidden;">fefe</p></div>--><?php
+
+                  echo  $orders[$i]["colors"];
+             ?></div>
+              <div class="col-sm-2"><p class="mainBody"><?php echo $orders[$i]["quantity"];?></p></div>
+        <div class="col-sm-2"><?php echo $products[$j]["currency"]?> <?php echo $products[$j]["price"];?></div>
+          <div class="col-sm-2"><?php echo $orders[$i]["quantity"] * $products[$j]["price"];?></div>
+        <?php
+         $total += ($orders[$i]["quantity"] * $products[$j]["price"]);
+           }
+         }
+       }
+     }
+     ?>
+
+
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6"><p class="mainBody">Total Bill</p></div>
+        <div class="col-sm-6"><?php echo "KSH";?> <?php echo $total;?></div>
+      </div>
+       <div class="row">
+        <div class="col-sm-6"><p class="mainBody">Discount Code(<?php echo $promoCode;?>) </p></div>
+        <div class="col-sm-6"><?php
+               for ($i=0; $i < count($influencers) ; $i++) {
+                  if ($influencers[$i]["discountCode"] == $promoCode) {
+                      $percent = $influencers[$i]["percentOff"];
+
+                   $discount = ($total*$influencers[$i]["percentOff"])/100;
+                  }
+                 }
+                 if (!isset($discount)) {
+                  $discount = 0;
+                   echo "0 % OFF";
+                 }
+                 else{
+                     echo $percent;
+                     echo "% OFF";
+                 }
+
+
+                ?></div>
+      </div>
+       <div class="row">
+        <div class="col-sm-6"><p class="mainBody"><b>Total to be paid </p></b></div>
+        <div class="col-sm-6"><b class="toolti"><?php echo "KSH";?> <?php echo $total-$discount;?><span class="tooltiptext"> <!-- Please do not edit this code - https://xeconvert.com/currency-converter-widget starts here --><iframe src="https://xeconvert.com/widget1?from=kes&to=usd&lang=&theme=yellow&font=12" width="100%" height="300" frameborder="0" scrolling="no"></iframe><div style="font-size:12px;font-family:arial;text-align:right;"></div><!-- https://xeconvert.com/currency-converter-widget ends here --></span></b></div>
+      </div>
+       <div class="row">
+        <div class="col-sm-6"><p class="mainBody"><b>Payment Status </p></b></div>
+        <div class="col-sm-6"><b class="text-danger">Not Paid</b></div>
+      </div>
+           <p class="text-muted">A Sanabora Admin will contact you after you place your order.</p>
+      <a href="postOrder.php?data=<?php
+                 date_default_timezone_set("Africa/Nairobi");
+          $leo=date("F j, Y, g:i a");
+          $day=date("d");
+          $month=date("m");
+          $year=date("Y");
+          $time=date("h:i:sa");
+          $user=$_COOKIE['id'];
+        echo base64_encode("INSERT INTO `accepted_invoice`(`userId`, `promoCode`, `first`, `last`, `username`, `email`, `address`, `contact`, `country`, `city`, `courier`,`postal`,`day`, `month`, `year`, `date`, `time`) VALUES('$user','$promoCode','$first','$last','$username','$email','$address','$contact','$country','$city', '$courier','$postal','$day','$month','$year','$leo','$time')");  ?>"><button class="btn btn-lg btn-secondary" style="margin-top: 2%;" type="submit"><small  class="text-light">ACCEPT INVOICE</small></button></a>
+      <a href="checkout.php"><button class="btn btn-lg btn-danger" style="margin-top: 2%;" type="submit"><small>CANCEL ORDER</small></button></a>
+      </div>
+
+
+          </div>
+           <div class="col-md-2">
+
+          </div>
+
+  </div>
+
+
+
+</div>
+</div>

@@ -28,6 +28,10 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { BannerComponent } from './banner/banner.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { HeroimageComponent } from './heroimage/heroimage.component';
+import { SearchpageComponent } from './searchpage/searchpage.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
 //import { LoginComponent } from './login/login.component';
 //import { RegisterComponent } from './register/register.component';
 //import { DashboardComponent } from './dashboard/dashboard.component';
@@ -51,7 +55,11 @@ import { HeroimageComponent } from './heroimage/heroimage.component';
     SearchbarComponent,
     BannerComponent,
     AuthenticationComponent,
-    HeroimageComponent
+    HeroimageComponent,
+    SearchpageComponent,
+    InvoiceComponent,
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
