@@ -11,10 +11,12 @@ $head:'Oswald', sans-serif;
 $body:'Roboto', sans-serif;
 
 
-$body-bg: #ffffff;
+$body-bg:whitesmoke;
 $body-color: #111111;
 $primary:#EAEAEA;
 $secondary:#FB8500;
+$success:green;
+$info:blue;
 //$success:;
 //$info,
 //$warning,
@@ -30,6 +32,29 @@ p{
 }
 .cardRadius {
   border-radius: 2rem;
+}
+.footerLink {
+	color: $body-color;
+	font-size:$fontSize5;
+	font-family: $body;
+}
+.footerLinkIcons {
+	color: $body-color;
+	font-size:$fontSize4;
+	font-family: $body;
+	margin-right:5%;
+
+}
+.mainHeader {
+	color: $dark;
+	font-size:$fontSize2;
+	font-family: $head;
+    display:inline;
+}
+.mainBody, label, small,.page-item, .page-link {
+	color: $dark;
+	font-size:$fontSize4;
+	font-family: $body;
 }
 // Custom.scss
 // Option A: Include all of Bootstrap
