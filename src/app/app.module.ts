@@ -15,7 +15,6 @@ import { QuickTutorialCardComponent } from './quick-tutorial-card/quick-tutorial
 import { MainCourseCardComponent } from './main-course-card/main-course-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomepageComponent } from './homepage/homepage.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MywalletComponent } from './mywallet/mywallet.component';
@@ -28,7 +27,6 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { BannerComponent } from './banner/banner.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { HeroimageComponent } from './heroimage/heroimage.component';
-import { SearchpageComponent } from './searchpage/searchpage.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
@@ -43,7 +41,6 @@ import { HomeComponent } from './home/home.component';
     MainCourseCardComponent,
     NavbarComponent,
     FooterComponent,
-    HomepageComponent,
     CertificatesComponent,
     DashboardComponent,
     MywalletComponent,
@@ -56,7 +53,6 @@ import { HomeComponent } from './home/home.component';
     BannerComponent,
     AuthenticationComponent,
     HeroimageComponent,
-    SearchpageComponent,
     InvoiceComponent,
     SearchComponent,
     HomeComponent
