@@ -30,6 +30,7 @@ import { HeroimageComponent } from './heroimage/heroimage.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
+import { LandingComponent } from './landing/landing.component';
 //import { LoginComponent } from './login/login.component';
 //import { RegisterComponent } from './register/register.component';
 //import { DashboardComponent } from './dashboard/dashboard.component';
@@ -55,7 +56,8 @@ import { HomeComponent } from './home/home.component';
     HeroimageComponent,
     InvoiceComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ $body:'Roboto', sans-serif;
 /*font weight*/
 $weight1:700;
 
+//colors
 $body-bg:#ffffff;
 $body-color: #111111;
 $primary:whitesmoke;
@@ -24,6 +25,11 @@ $info:blue;
 $danger:red;
 $light:#ffffff;
 $dark:#000000;
+
+//utilities
+$width:100%;
+$border-radius:0;
+$auto-height:auto;
 
 h1 {
   font-family: $body;
@@ -79,6 +85,15 @@ p{
   left: 50%;
   transform: translate(-50%, -50%);
   color: $dark;
+}
+//side text
+.side-text {
+  text-align:center;
+}
+.side-image {
+  width: $width;
+  height:$auto-height;
+  border-radius:$border-radius;
 }
 // Custom.scss
 // Option A: Include all of Bootstrap
