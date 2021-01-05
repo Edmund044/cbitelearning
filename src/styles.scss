@@ -30,7 +30,32 @@ $dark:#000000;
 $width:100%;
 $border-radius:0;
 $auto-height:auto;
-
+//side-text utilities
+$side-text-margin-top: 25%;
+$side-text-margin-left: 20%;
+//a-card utilities
+$a-card-float:left;
+$a-card-margin-left:1%;
+$a-card-text-decoration: none;
+//card-image utilities
+$card-image-width:100%;
+$card-image-height:12.09rem;
+$card-image-object-fit:cover;
+$card-image-border-radius:0rem;
+$card-image-width: 21.5rem;  
+//card-whole
+$card-whole-width:21.5rem;
+//.sub-heading 
+$sub-heading-float:left;
+$sub-heading-size:0.6rem;  
+//.icon-2 uitlities
+$icon-2-float:left;
+$icon-2-font-size:0.8rem;  
+//.icon-21 utilities
+$icon-21-float:left;
+$icon-21-font-size:0.8rem;
+$icon-21-margin-left:1rem;
+  
 h1 {
   font-family: $body;
   line-height: 1.5;
@@ -88,13 +113,43 @@ p{
 }
 //side text
 .side-text {
-  margin-top: 25%;
-  margin-left: 20%;
+  margin-top: $side-text-margin-top;
+  margin-left: $side-text-margin-left;
 }
 .side-image {
   width: $width;
   height:$auto-height;
   border-radius:$border-radius;
+}
+//card styling
+.a-card {
+  float:$a-card-float;
+  margin-left:$a-card-margin-left;
+  text-decoration: $a-card-text-decoration;
+}
+.card-image {
+  width:$card-image-width;
+  height:$card-image-height;
+  object-fit:$card-image-object-fit;
+  border-radius:$card-image-border-radius;
+}
+.card-whole {
+  width: $card-whole-width;
+}
+.sub-heading {
+  float:$sub-heading-float;
+  font-size:$sub-heading-size;
+}
+  
+//.icon-21 utilities
+.icon-2 {
+  float:$icon-2-float;
+  font-size:$icon-2-font-size;
+}
+.icon-21 {
+  float:$icon-21-float;
+  font-size:$icon-21-font-size;
+  margin-left:$icon-21-margin-left;
 }
 // Custom.scss
 // Option A: Include all of Bootstrap
