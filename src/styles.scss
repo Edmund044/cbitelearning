@@ -43,6 +43,7 @@ $card-image-height:12.09rem;
 $card-image-object-fit:cover;
 $card-image-border-radius:0rem;
 $card-image-width: 21.5rem;  
+$card-image-pointer:pointer;
 //card-whole
 $card-whole-width:21.5rem;
 //.sub-heading 
@@ -132,6 +133,7 @@ p{
   height:$card-image-height;
   object-fit:$card-image-object-fit;
   border-radius:$card-image-border-radius;
+  cursor:$card-image-pointer;
 }
 .card-whole {
   width: $card-whole-width;
