@@ -17,7 +17,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <!--Get your own code at fontawesome.com-->
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
 
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+         ["Day", "Hours",  { role: 'style' } ],
+          ['Mon', 1,'color: #fb8500'],
+          ["Tue", 2,'color: #fb8500'],
+          ["Wed", 5,'color: #fb8500'],
+          ["Thur", 1,'color: #fb8500'],
+          ["Fri", 2,'color: #fb8500'],
+          ['Sat', 3,'color: #fb8500'],
+          ['Sun', 6,'color: #fb8500']
+        ]);
+
+        var options = {
+          width: 300,
+          legend: { position: 'none' },
+          chart: {
+            title: 'Average Time spent',
+            subtitle: 'popularity by hours spent' },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "50%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Courses', 'Total'],
+          ['Completed',     1],
+          ['In progress',      2],
+          ['Not started',  2],
+
+        ]);
+
+        var options = {
+
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
 <app-root></app-root>
