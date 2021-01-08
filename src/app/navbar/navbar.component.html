@@ -1,21 +1,15 @@
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-none mx-auto">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
     <a class="navbar-brand h1" href="#">CBIT</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a routerLink="/home" class="nav-link" routerLinkActive="active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/dashboard" class="nav-link" routerLinkActive="active">Dashboard</a>
-        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Courses
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -24,17 +18,24 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a routerLink="/certificates" class="nav-link" routerLinkActive="active">Certificates</a>
-        </li>
+
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="d-flex ">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+        <datalist id="datalistOptions">
+          <option value="San Francisco">
+          <option value="New York">
+          <option value="Seattle">
+          <option value="Los Angeles">
+          <option value="Chicago">
+        </datalist>
       </form>
+      <button class="btn btn-outline-success  d-flex justify-content-end" type="submit">Login</button>
+      <button class="btn btn-outline-success d-flex justify-content-end" type="submit">Sign Up</button>
     </div>
-  </div>
+
 </nav>
+</div>
   <router-outlet></router-outlet>
 
 
