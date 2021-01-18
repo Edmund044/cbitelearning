@@ -10,7 +10,7 @@ $fontSize5:10px;
 $head:'Oswald', sans-serif;
 $body:'Roboto', sans-serif;
 /*font weight*/
-$weight1:700;
+$weight1:400;
 
 //colors
 $body-bg:#ffffff;
@@ -45,7 +45,7 @@ $card-image-border-radius:0rem;
 $card-image-width: 21.5rem;
 $card-image-pointer:pointer;
 //card-whole
-$card-whole-width:21.5rem;
+$card-whole-width:23.125rem;
 //.sub-heading
 $sub-heading-float:left;
 $sub-heading-size:0.6rem;
@@ -205,6 +205,6 @@ p{
 //heading typograpghy
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
 //body typograpghy
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 //fonts
 @import url('https://use.fontawesome.com/b8e23bf3b8.js');
