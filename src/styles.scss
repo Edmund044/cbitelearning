@@ -88,11 +88,11 @@ $icon-21-margin-left:1rem;
 */
 
 h1 {
-  font-family: $body;
+  font-family: $head;
   line-height: 1.5;
 }
 h2,h3,h4,h5,h6 {
-  font-family: $body;
+  font-family: $head;
   line-height: 1.5;
 }
 p{
@@ -104,7 +104,7 @@ p{
 .footerLink {
 	color: $body-color;
 	font-size:$fontSize5;
-	font-family: $body;
+	font-family: $head;
 }
 .footerLinkIcons {
 	color: $body-color;
@@ -203,7 +203,7 @@ p{
 
 @import "../node_modules/bootstrap/scss/grid";
 //heading typograpghy
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
 //body typograpghy
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 //fonts
