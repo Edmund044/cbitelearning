@@ -31,6 +31,13 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ServicesComponent } from './services/services.component';
+import { EventsComponent } from './events/events.component';
+import { NewsComponent } from './news/news.component';
+import { ContactComponent } from './contact/contact.component';
+import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 //import { LoginComponent } from './login/login.component';
 //import { RegisterComponent } from './register/register.component';
 //import { DashboardComponent } from './dashboard/dashboard.component';
@@ -57,7 +64,14 @@ import { LandingComponent } from './landing/landing.component';
     InvoiceComponent,
     SearchComponent,
     HomeComponent,
-    LandingComponent
+    LandingComponent,
+    AboutUsComponent,
+    PortfolioComponent,
+    ServicesComponent,
+    EventsComponent,
+    NewsComponent,
+    ContactComponent,
+    SocialmediaComponent
   ],
   imports: [
     BrowserModule,
