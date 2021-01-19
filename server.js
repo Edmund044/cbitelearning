@@ -58,3 +58,25 @@ app.delete("products/id",(req,res)=>{
      });
 });
 //insert route
+app.post("",(req,res)=>{
+  mysqlConnection.query("",(err,rows)=>{
+    if(!err){
+      res.send(rows);
+    }
+    else{
+      res.send("Error encounterd!!");
+    }
+  });
+});
+//update route
+app.put("/",(req,res)=>{
+    mysqlConnection.query("",(err,rows)=>{
+      if(!err){
+        res.send("Successful");
+      }
+      else{
+        res.send("Not successful");
+      }
+    });
+
+});
